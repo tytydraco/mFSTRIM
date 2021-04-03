@@ -11,12 +11,12 @@
         <item>2592000000</item>
     </string-array>
     <string-array name="interval_entries">
-        <item>Reset</item>
+        <item>Unset; system default</item>
         <item>Never force trim</item>
         <item>Every reboot</item>
         <item>Every day</item>
         <item>Every other day</item>
-        <item>Every three days</item>
+        <item>Every three days (default)</item>
         <item>Every week</item>
         <item>Every month</item>
     </string-array>
