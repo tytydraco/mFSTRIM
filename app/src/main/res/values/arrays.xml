@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="interval_values">
+        <item>0</item>
+        <item>1</item>
+        <item>86400000</item>
+        <item>172800000</item>
+        <item>259200000</item>
+        <item>604800000</item>
+        <item>2592000000</item>
+    </string-array>
+    <string-array name="interval_entries">
+        <item>Never force trim</item>
+        <item>Every reboot</item>
+        <item>Every day</item>
+        <item>Every other day</item>
+        <item>Every three days</item>
+        <item>Every week</item>
+        <item>Every month</item>
+    </string-array>
+</resources>
