@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="interval_values">
+        <item>null</item>
         <item>0</item>
         <item>1</item>
         <item>86400000</item>
@@ -10,6 +11,7 @@
         <item>2592000000</item>
     </string-array>
     <string-array name="interval_entries">
+        <item>Reset</item>
         <item>Never force trim</item>
         <item>Every reboot</item>
         <item>Every day</item>

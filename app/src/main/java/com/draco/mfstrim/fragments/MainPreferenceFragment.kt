@@ -4,7 +4,6 @@ import android.content.*
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
-import android.text.format.DateUtils
 import androidx.preference.*
 import com.draco.mfstrim.R
 import com.draco.mfstrim.repositories.constants.SettingsConstants
@@ -54,16 +53,14 @@ class MainPreferenceFragment : PreferenceFragmentCompat(), SharedPreferences.OnS
      * Update the UI to show the new constants
      */
     private fun refreshSettings() {
-        val ms = Settings.Global.getLong(requireContext().contentResolver, SettingsConstants.FSTRIM_MANDATORY_INTERVAL, 3 * DateUtils.DAY_IN_MILLIS)
-        interval.value = ms.toString()
+        interval.value = Settings.Global.getString(requireContext().contentResolver, SettingsConstants.FSTRIM_MANDATORY_INTERVAL) ?: "null"
     }
 
     /**
      * Take the UI settings and apply them as constants
      */
     private fun applySettings() {
-        val ms = interval.value.toLong()
-        Settings.Global.putLong(requireContext().contentResolver, SettingsConstants.FSTRIM_MANDATORY_INTERVAL, ms)
+        Settings.Global.putString(requireContext().contentResolver, SettingsConstants.FSTRIM_MANDATORY_INTERVAL, interval.value)
     }
 
     /**
